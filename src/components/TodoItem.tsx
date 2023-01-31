@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = () => {
+function TodoItem() {
   return (
     <ul>
       <li>
@@ -10,6 +10,6 @@ const TodoItem = () => {
       </li>
     </ul>
   );
-};
+}
 
 export default TodoItem;

@@ -1,17 +1,11 @@
 // import GlobalStyle from "./styles/GlobalStyle";
-
-import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem";
-
+import TodoList from "./components/TodoList";
 function App() {
   return (
     <>
-      <TodoForm />
-      <TodoItem />
+      <TodoList />
     </>
   );
 }
 
 export default App;
-
-

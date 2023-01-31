@@ -1,15 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import TodoItem from "./TodoItem";
+import React, { useState } from "react";
 
-const TodoForm = () => {
+function TodoForm() {
   const [todo, setTodo] = useState("");
-  const onSubmit = (e: React.FormEvent) => {
+  function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     // TODO: new todo 생성하기
     console.log(todo);
     setTodo("");
-  };
+  }
   return (
     <form onSubmit={onSubmit}>
       <input
@@ -20,6 +18,6 @@ const TodoForm = () => {
       <button>등록</button>
     </form>
   );
-};
+}
 
 export default TodoForm;
