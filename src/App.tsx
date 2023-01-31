@@ -1,6 +1,17 @@
-import React from "react";
+// import GlobalStyle from "./styles/GlobalStyle";
+
+import TodoForm from "./components/TodoForm";
+import TodoItem from "./components/TodoItem";
+
 function App() {
-  return <div className="App">hello world!</div>;
+  return (
+    <>
+      <TodoForm />
+      <TodoItem />
+    </>
+  );
 }
 
 export default App;
+
+
