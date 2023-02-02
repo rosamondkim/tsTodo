@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./TodoList.scss";
 interface Todo {
   text: string;
   completed: boolean;
@@ -15,9 +15,9 @@ const TodoList: React.FC = () => {
   };
   console.log(todos);
   return (
-    <div>
-      <form onSubmit={addTodo}>
-        <h1>다 울었니? 이제 할일을 하자</h1>
+    <div className="todoList">
+      <h1>다 울었니? 이제 할일을 하자</h1>
+      <form className="todoForm" onSubmit={addTodo}>
         <input
           type="text"
           placeholder="할일"
@@ -26,7 +26,7 @@ const TodoList: React.FC = () => {
         />
         <button>등록</button>
       </form>
-      <ul>
+      <ul className="todoUl">
         {todos.map((todo, i) => (
           <li key={i}>{todo.text}</li>
         ))}

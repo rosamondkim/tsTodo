@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     color: inherit;
+    font-size: 10px;
   }
   a {
     color: inherit;
@@ -16,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
   }
   
   button, input, textarea {
-
     padding: 0;
     border: none;
     background-color: inherit;
