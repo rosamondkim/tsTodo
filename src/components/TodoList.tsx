@@ -13,7 +13,19 @@ const TodoList: React.FC = () => {
     setTodos([...todos, { text: value, completed: false }]);
     setValue("");
   };
-  console.log(todos);
+  const toggleTodo = (selectedTodo: Todo) => {
+    const newTodos = todos.map((todo) => {
+      if (todo === selectedTodo) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
   return (
     <div className="todoList">
       <h1>다 울었니? 이제 할일을 하자</h1>
@@ -28,7 +40,15 @@ const TodoList: React.FC = () => {
       </form>
       <ul className="todoUl">
         {todos.map((todo, i) => (
-          <li key={i}>{todo.text}</li>
+          <li key={i} onClick={() => toggleTodo(todo)}>
+            <span
+              style={{
+                textDecoration: todo.completed ? "line-through" : "none",
+              }}
+            >
+              {todo.text}
+            </span>
+          </li>
         ))}
       </ul>
     </div>
